@@ -31,10 +31,9 @@ app.register(authRoutes)
 app.register(uploadRoutes)
 app.register(memoriesRoutes)
 
-app.listen(process.env.PORT || 3333, '0.0.0.0', (err, address) => {
+app.listen(process.env.PORT || 3333, '0.0.0.0', (err) => {
   if (err) {
-    console.error(err)
+    app.log.error(err)
     process.exit(1)
   }
-  console.log(`🚀 Server listening on ${address}`)
 })
